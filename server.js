@@ -65,7 +65,8 @@ router.get("/comic/:id?", async function(req, res) {
     .replace(/\{\{/g, "<b>")
     .replace(/\}\}/g, "</b>")
     .replace(/\(\(/g, "<u>")
-    .replace(/\)\)/g, "</u>");
+    .replace(/\)\)/g, "</u>")
+    .replace(/([^\\\r\n]+:)/g, matched => "<b>" + matched + "</b>");
 
   res.render("comic", data);
 });
