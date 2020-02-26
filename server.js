@@ -54,6 +54,9 @@ router.get("/comic/:id?", async function(req, res) {
     .get(`https://xkcd.com/${req.params.id || ""}/info.0.json`)
     .then(res => {
       data = res.data;
+    })
+    .catch(err => {
+      res.send("Error Occured!");
     });
 
   data = { ...data, pageVisitCount: pageVisitCount[req.params.id] };
