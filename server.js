@@ -58,6 +58,16 @@ router.get("/comic/:id?", async function(req, res) {
 
   data = { ...data, pageVisitCount: pageVisitCount[req.params.id] };
 
+  let replacedText = data.transcript
+    .replace(/\[\[/g, "<i>")
+    .replace(/\]\]/g, "</i>")
+    .replace(/\{\{/g, "<b>")
+    .replace(/\}\}/g, "</b>")
+    .replace(/\(\(/g, "<u>")
+    .replace(/\)\)/g, "</u>");
+
+  data.transcript = replacedText;
+
   res.render("comic", data);
 });
 

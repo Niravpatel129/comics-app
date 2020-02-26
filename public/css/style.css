@@ -36,6 +36,8 @@ img {
 
 p {
   white-space: pre-line;
+  margin: 13px 0;
+  line-height: 2rem;
 }
 @media screen and (max-width: 768px) {
   .flex-items {
