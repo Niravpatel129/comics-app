@@ -10,7 +10,7 @@ app.set("view engine", "html");
 
 //routes
 router.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname + "/index.html"));
+  res.send("hello world");
 });
 
 router.get("/comic/:id", async function(req, res) {
