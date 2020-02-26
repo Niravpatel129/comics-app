@@ -23,6 +23,7 @@ function incrementPageVisit(id) {
   }
 }
 
+// future feature to go to the highest count page
 function getHighestVisitPage() {
   if (Object.keys(pageVisitCount).length === 0) {
     // just return 1 if there is no visits yet
@@ -43,17 +44,20 @@ router.get("/", function(req, res) {
   res.redirect(`/comic/`);
 });
 
+// redirect to comic based on the href provided
 router.get("/comic/:id?", async function(req, res) {
   let data = {};
+
   incrementPageVisit(req.params.id);
+
   await axios
     .get(`https://xkcd.com/${req.params.id || ""}/info.0.json`)
     .then(res => {
       data = res.data;
     });
 
-  // console.log(data.transcript);
   data = { ...data, pageVisitCount: pageVisitCount[req.params.id] };
+
   res.render("comic", data);
 });
 
