@@ -8,13 +8,15 @@
   </head>
   <body>
     <div class="buttons">
-      <a class="button" href="/comic/<%= num-1 %>">Previous</a>
-      <a class="button" href="/comic/<%= num+1 %>">Next</a>
-      <a
-        class="button"
-        href="/comic/<%= Math.floor(Math.random() * Math.floor(2000)) %>"
-        >Random Comic</a
-      >
+      <div class="btn">
+        <a class="button" href="/comic/<%= num-1 %>">Previous</a>
+        <a class="button" href="/comic/<%= num+1 %>">Next</a>
+        <a
+          class="button"
+          href="/comic/<%= Math.floor(Math.random() * Math.floor(2000)) %>"
+          >Random Comic</a
+        >
+      </div>
     </div>
     <div class="container">
       <div class="flex-items">

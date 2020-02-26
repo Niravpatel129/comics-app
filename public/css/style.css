@@ -20,8 +20,10 @@ img {
 }
 
 .buttons {
-  display: inline-block;
   margin: 30px;
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .button {
@@ -34,4 +36,16 @@ img {
 
 p {
   white-space: pre-line;
+}
+@media screen and (max-width: 768px) {
+  .flex-items {
+    width: 100%;
+  }
+  .container {
+    display: block;
+  }
+}
+
+a:hover {
+  background-color: lightblue;
 }
