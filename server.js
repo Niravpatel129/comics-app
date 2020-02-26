@@ -1,7 +1,5 @@
 const express = require("express");
 const app = express();
-const path = require("path");
-const router = express.Router();
 const axios = require("axios");
 
 app.use(express.static("public"));
@@ -9,6 +7,7 @@ app.engine("html", require("ejs").renderFile);
 app.set("view engine", "html");
 
 //routes
+const router = express.Router();
 router.get("/", function(req, res) {
   res.send("hello world");
 });
