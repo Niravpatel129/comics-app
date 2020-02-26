@@ -18,9 +18,9 @@ Use the xkcd API (see https://xkcd.com/json.html) ✔️
 
 ● Ability to navigate to a specific comic strip by including the comic # in the URL ✔️
 
-● Parse transcript from API into a more readable format & display on the page
+● Parse transcript from API into a more readable format & display on the page ✔️
 
-● Make the page look nice using vanilla CSS (DO NOT use any CSS frameworks)
+● Make the page look nice using vanilla CSS (DO NOT use any CSS frameworks) 
 
 ● A random button that goes to a random comic strip ✔️
 
