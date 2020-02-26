@@ -1,0 +1,16 @@
+body {
+  background-color: whitesmoke;
+}
+
+.buttons {
+  display: inline-block;
+  margin-top: 30px;
+}
+
+.button {
+  text-decoration: none;
+  color: black;
+  background-color: #ffffff;
+  padding: 7px;
+  border: 1px solid black;
+}

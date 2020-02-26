@@ -3,13 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
+
     <title>Document</title>
   </head>
   <body>
-    <div>Num: <%= num %></div>
-    <div>title: <%= title %></div>
-    <div>alt: <%= alt %></div>
+    <div><b>ID:</b> <%= num %></div>
+    <div><b>Visit Counter:</b> <%= pageVisitCount %></div>
+    <div><b>title:</b> <%= title %></div>
+    <div><b>alt:</b> <%= alt %></div>
     <img src="<%= img %>" />
-    <div>year: <%= year %></div>
+    <div><b>year:</b> <%= year %></div>
+    <div class="buttons">
+      <a class="button" href="/comic/<%= num-1 %>">Previous</a>
+      <a class="button" href="/comic/<%= num+1 %>">Next</a>
+      <a
+        class="button"
+        href="/comic/<%= Math.floor(Math.random() * Math.floor(2000)) %>"
+        >Random Comic</a
+      >
+    </div>
   </body>
 </html>
