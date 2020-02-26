@@ -52,7 +52,7 @@ router.get("/comic/:id?", async function(req, res) {
       data = res.data;
     });
 
-  console.log(data.transcript);
+  // console.log(data.transcript);
   data = { ...data, pageVisitCount: pageVisitCount[req.params.id] };
   res.render("comic", data);
 });

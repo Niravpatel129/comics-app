@@ -2,15 +2,36 @@ body {
   background-color: whitesmoke;
 }
 
+.container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.flex-items {
+  width: 45%;
+}
+
+.image-container {
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
 .buttons {
   display: inline-block;
-  margin-top: 30px;
+  margin: 30px;
 }
 
 .button {
   text-decoration: none;
   color: black;
   background-color: #ffffff;
-  padding: 7px;
+  padding: 5px;
   border: 1px solid black;
+}
+
+p {
+  white-space: pre-line;
 }

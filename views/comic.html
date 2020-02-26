@@ -4,17 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/css/style.css" rel="stylesheet" type="text/css" />
-
     <title>Comic <%= num %></title>
   </head>
   <body>
-    <div><b>ID:</b> <%= num %></div>
-    <div><b>Visit Counter:</b> <%= pageVisitCount %></div>
-    <div><b>title:</b> <%= title %></div>
-    <div><b>alt:</b> <%= alt %></div>
-    <img src="<%= img %>" />
-    <div><b>year:</b> <%= year %></div>
-    <div><b>transcript:</b> <%= transcript %></div>
     <div class="buttons">
       <a class="button" href="/comic/<%= num-1 %>">Previous</a>
       <a class="button" href="/comic/<%= num+1 %>">Next</a>
@@ -23,6 +15,22 @@
         href="/comic/<%= Math.floor(Math.random() * Math.floor(2000)) %>"
         >Random Comic</a
       >
+    </div>
+    <div class="container">
+      <div class="flex-items">
+        <div><b>Title:</b> <%= title %></div>
+        <div><b>Visit Counter:</b> <%= pageVisitCount %></div>
+        <div><b>Date:</b> <%= year %>/<%= month %>/<%= day %></div>
+        <div class="image-container">
+          <img src="<%= img %>" alt="<%= alt %>" />
+        </div>
+      </div>
+      <div class="flex-items transcript">
+        <p>
+          <b>Transcript:</b><br />
+          <%= (transcript) %>
+        </p>
+      </div>
     </div>
   </body>
 </html>
