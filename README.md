@@ -1,5 +1,5 @@
 # comics-app
-local copy of app hosted at: https://comics-app-nirav.herokuapp.com/comic/566
+copy of app hosted at: https://comics-app-nirav.herokuapp.com/comic/566
 
 Renders a specific comic based on the backend
 
