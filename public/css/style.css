@@ -97,6 +97,16 @@ a {
   user-select: none;
 }
 
+i {
+  color: gray;
+  font-size: 0.9rem;
+}
+
+u {
+  text-decoration: none;
+  font-weight: bolder;
+}
+
 /* media queries for below tablet */
 @media screen and (max-width: 768px) {
   .flex-items {

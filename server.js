@@ -5,14 +5,12 @@ const app = express();
 const axios = require("axios");
 
 const PORT = process.env.PORT || 3000;
+let pageVisitCount = {}; // hold how many times all the comics have been visited
 
 // express middlewares and setup for our rendering engine
 app.use(express.static(__dirname + "/public"));
 app.engine("html", require("ejs").renderFile);
 app.set("view engine", "html");
-
-// helper function
-let pageVisitCount = {};
 
 // hold all the page visits for each comic
 function incrementPageVisit(id) {
@@ -45,16 +43,14 @@ router.get("/comic/:id?", async function(req, res) {
         };
 
         // regex parsing for calrity
-        if (data.transcript) {
-          data.transcript = data.transcript
-            .replace(/\[\[/g, "<i>")
-            .replace(/\]\]/g, "</i>")
-            .replace(/\{\{/g, "<b>")
-            .replace(/\}\}/g, "</b>")
-            .replace(/\(\(/g, "<u>")
-            .replace(/\)\)/g, "</u>")
-            .replace(/([^\\\r\n]+:)/g, matched => "<b>" + matched + "</b>");
-        }
+        data.transcript = data.transcript
+          .replace(/\[\[/g, "<i>")
+          .replace(/\]\]/g, "</i>")
+          .replace(/\{\{/g, "<b>")
+          .replace(/\}\}/g, "</b>")
+          .replace(/\(\(/g, "<u>")
+          .replace(/\)\)/g, "</u>")
+          .replace(/([^\\\r\n]+:)/g, matched => "<b>" + matched + "</b>");
 
         res.render("comic", data);
       });
