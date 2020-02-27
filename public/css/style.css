@@ -1,7 +1,37 @@
-body {
-  background-color: whitesmoke;
+html {
+  height: 100%;
 }
 
+body {
+  background: #4472ca;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+  margin: 0;
+}
+
+.comic-container {
+  margin: 20px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+/* Header */
+h1 {
+  font-size: 30px;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 0px 1.2px #cfdee7;
+  padding-top: 20px;
+  font-family: Krungthep;
+}
+/* a tag reset */
+h1 a {
+  text-decoration: none;
+  color: #4472ca;
+}
+
+/* Container */
 .container {
   display: flex;
   justify-content: space-evenly;
@@ -17,7 +47,7 @@ body {
 
 img {
   width: 100%;
-  max-height: 700px;
+  max-height: 500px;
 }
 
 .buttons {
@@ -29,10 +59,14 @@ img {
 
 .button {
   text-decoration: none;
-  color: black;
-  background-color: #ffffff;
-  padding: 5px;
-  border: 1px solid black;
+  font-size: 0.9rem;
+  background-color: #5e7ce2;
+  color: white;
+  padding: 8px;
+  border: 0.71px solid #0a369d;
+  border-radius: 10px;
+  font-weight: 1000;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 p {
@@ -40,6 +74,12 @@ p {
   margin: 13px 0;
   line-height: 2rem;
 }
+
+.button:hover {
+  background-color: #5691ff;
+}
+
+/* media queries */
 @media screen and (max-width: 768px) {
   .flex-items {
     width: 100%;
@@ -47,8 +87,4 @@ p {
   .container {
     display: block;
   }
-}
-
-a:hover {
-  background-color: lightblue;
 }

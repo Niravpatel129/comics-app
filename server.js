@@ -56,7 +56,9 @@ router.get("/comic/:id?", async function(req, res) {
       data = res.data;
     })
     .catch(err => {
-      res.send("Error Occured!");
+      res.redirect(`/comic/`);
+
+      console.log("went to a comic that dosn't exist yet!!");
     });
 
   data = { ...data, pageVisitCount: pageVisitCount[req.params.id] };
