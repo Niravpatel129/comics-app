@@ -58,21 +58,23 @@ router.get("/comic/:id?", async function(req, res) {
       data = res.data;
     })
     .catch(err => {
-      res.redirect(`/comic/`);
+      res.redirect(`/comic/1`);
       console.log("went to a comic that dosn't exist yet!!");
     });
 
   data = { ...data, pageVisitCount: pageVisitCount[req.params.id] };
 
   // regex parsing for calrity
-  data.transcript = data.transcript
-    .replace(/\[\[/g, "<i>")
-    .replace(/\]\]/g, "</i>")
-    .replace(/\{\{/g, "<b>")
-    .replace(/\}\}/g, "</b>")
-    .replace(/\(\(/g, "<u>")
-    .replace(/\)\)/g, "</u>")
-    .replace(/([^\\\r\n]+:)/g, matched => "<b>" + matched + "</b>");
+  if (data.transcript) {
+    data.transcript = data.transcript
+      .replace(/\[\[/g, "<i>")
+      .replace(/\]\]/g, "</i>")
+      .replace(/\{\{/g, "<b>")
+      .replace(/\}\}/g, "</b>")
+      .replace(/\(\(/g, "<u>")
+      .replace(/\)\)/g, "</u>")
+      .replace(/([^\\\r\n]+:)/g, matched => "<b>" + matched + "</b>");
+  }
 
   res.render("comic", data);
 });
