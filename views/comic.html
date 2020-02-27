@@ -11,13 +11,15 @@
       <h1><a href="/">Web Comics</a></h1>
       <div class="buttons">
         <div class="btn">
-          <a class="button" href="/comic/<%= num-1 %>">Previous</a>
-          <a class="button" href="/comic/<%= num+1 %>">Next</a>
+          <a class="button" href="/comic/1">|❮</a>
+          <a class="button" href="/comic/<%= num-1 %>">❮ Previous</a>
           <a
             class="button"
             href="/comic/<%= Math.floor(Math.random() * Math.floor(2000)) %>"
-            >Random Comic</a
+            >Random</a
           >
+          <a class="button" href="/comic/<%= num+1 %>">Next ❯</a>
+          <a class="button" href="/">❯|</a>
         </div>
       </div>
       <div class="container">
