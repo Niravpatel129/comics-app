@@ -33,6 +33,7 @@ router.get("/", function(req, res) {
 // redirect to comic based on the href provided
 router.get("/comic/:id?", async function(req, res) {
   incrementPageVisit(req.params.id);
+  console.log("Loading Comic: " + req.params.id);
   try {
     await axios
       .get(`https://xkcd.com/${req.params.id || ""}/info.0.json`)
