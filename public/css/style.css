@@ -1,3 +1,4 @@
+/* Page Containers */
 html {
   height: 100%;
 }
@@ -14,6 +15,7 @@ body {
   margin: 20px;
   background-color: white;
   border-radius: 5px;
+  opacity: 0.95;
 }
 
 /* Header */
@@ -31,7 +33,7 @@ h1 a {
   color: #4472ca;
 }
 
-/* Container */
+/* Content Container */
 .container {
   display: flex;
   justify-content: space-evenly;
@@ -41,6 +43,13 @@ h1 a {
   width: 45%;
 }
 
+p {
+  white-space: pre-line;
+  margin: 13px 0;
+  line-height: 2rem;
+}
+
+/* Holding Image */
 .image-container {
   width: 100%;
 }
@@ -50,6 +59,7 @@ img {
   max-height: 500px;
 }
 
+/* Buttons Container */
 .buttons {
   margin: 30px;
   display: flex;
@@ -69,22 +79,21 @@ img {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-p {
-  white-space: pre-line;
-  margin: 13px 0;
-  line-height: 2rem;
-}
-
 .button:hover {
   background-color: #5691ff;
 }
 
-/* media queries */
+/* media queries for below tablet */
 @media screen and (max-width: 768px) {
   .flex-items {
     width: 100%;
   }
   .container {
     display: block;
+  }
+
+  .comic-container {
+    margin: 5px;
+    padding: 5px;
   }
 }

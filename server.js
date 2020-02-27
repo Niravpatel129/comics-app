@@ -40,7 +40,9 @@ function getHighestVisitPage() {
 //routes
 const router = express.Router();
 
+// entry point route
 router.get("/", function(req, res) {
+  // redirect to the "current comic"
   res.redirect(`/comic/`);
 });
 
@@ -57,7 +59,6 @@ router.get("/comic/:id?", async function(req, res) {
     })
     .catch(err => {
       res.redirect(`/comic/`);
-
       console.log("went to a comic that dosn't exist yet!!");
     });
 
