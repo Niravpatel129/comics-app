@@ -80,7 +80,7 @@ img {
   font-family: Lucida, Helvetica, sans-serif;
   text-transform: capitalize;
 
-  transition: 0.22s;
+  transition: background-color 0.22s;
   font-variant: small-caps;
 }
 
