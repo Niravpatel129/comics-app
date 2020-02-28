@@ -151,6 +151,10 @@ h2 {
     padding: 15px;
   }
 
+  .transcript p {
+    padding-top: 0px;
+  }
+
   body {
     width: 95%;
   }
