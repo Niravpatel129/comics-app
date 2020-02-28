@@ -38,14 +38,14 @@
       </div>
       <div class="container">
         <div class="flex-items">
-          <div><b>Comic:</b> #<%= num %></div>
-          <div><b>Title:</b> <%= title %></div>
           <div><b>Visit Counter:</b> <%= pageVisitCount %></div>
           <div><b>Date Posted:</b> <%= year %>/<%= month %>/<%= day %></div>
+          <h2><%= title %></h2>
           <div class="image-container">
             <img src="<%= img %>" alt="<%= alt %>" />
           </div>
         </div>
+        <% if(transcript){ %>
         <div class="flex-items transcript">
           <div>
             <p>
@@ -53,6 +53,9 @@
             </p>
           </div>
         </div>
+        <% } else{ %>
+        <div class="transcript-disabled">Transcript not available</div>
+        <% } %>
       </div>
     </div>
   </body>
