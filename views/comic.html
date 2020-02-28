@@ -15,10 +15,10 @@
           <a class="button" href="/comic/<%= num-1 %>">❮ Previous</a>
           <a
             class="button"
-            href="/comic/<%= Math.floor(Math.random() * Math.floor(2273)) %>"
+            href="/comic/<%= Math.floor(Math.random() * Math.floor(latestComic)) %>"
             >Random</a
           >
-          <% if(num === 2273){ %>
+          <% if(num === latestComic){ %>
           <a class="button disabled">Next ❯</a>
           <a class="button disabled">❯|</a>
 

@@ -6,6 +6,7 @@ const axios = require("axios");
 
 const PORT = process.env.PORT || 3000;
 let pageVisitCount = {}; // hold how many times all the comics have been visited
+let latestComic; // hold the most early comic's id
 
 // express middlewares and setup for our rendering engine
 app.use(express.static(__dirname + "/public"));
@@ -18,6 +19,14 @@ function incrementPageVisit(id) {
     pageVisitCount[id]++;
   } else {
     pageVisitCount[id] = 1;
+  }
+}
+
+// set latest comic id
+function setLatestComic(param, id) {
+  // check if we are on the homepage which loads the latest by default
+  if (param === undefined) {
+    latestComic = id;
   }
 }
 
@@ -39,11 +48,13 @@ router.get("/comic/:id?", async function(req, res) {
 
         // increment our comic page visit count
         incrementPageVisit(comicId);
+        setLatestComic(req.params.id, response.data.num);
 
         // append our counter onto the page data
         let data = {
           ...response.data,
-          pageVisitCount: pageVisitCount[comicId]
+          pageVisitCount: pageVisitCount[comicId],
+          latestComic: latestComic
         };
 
         // regex parsing for calrity
