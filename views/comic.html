@@ -15,7 +15,7 @@
           <a class="button" href="/comic/<%= num-1 %>">❮ Previous</a>
           <a
             class="button"
-            href="/comic/<%= Math.floor(Math.random() * Math.floor(2272)) %>"
+            href="/comic/<%= Math.floor(Math.random() * Math.floor(2273)) %>"
             >Random</a
           >
           <% if(num === 2273){ %>
@@ -31,6 +31,7 @@
       </div>
       <div class="container">
         <div class="flex-items">
+          <div><b>Comic:</b> #<%= num %></div>
           <div><b>Title:</b> <%= title %></div>
           <div><b>Visit Counter:</b> <%= pageVisitCount %></div>
           <div><b>Date Posted:</b> <%= year %>/<%= month %>/<%= day %></div>
