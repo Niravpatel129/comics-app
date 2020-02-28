@@ -1,31 +1,42 @@
-# comics-app
-copy of app hosted at: https://comics-app-nirav.herokuapp.com/comic/566
+# Web Comics
 
-Renders a specific comic based on the backend
+This is a comic strip rendering / reader app, the role of this app is to display all the comics from xkcd.com api. 
 
-Use the xkcd API (see https://xkcd.com/json.html) ✔️
+## Installation
+run the following commands in your cmd or bash:
 
-● Has to be hosted on Heroku ✔️
+```bash
+git clone https://github.com/Shahrzadk/S360-Initial-Case-Study-Shahrzad.git
+cd ./comics-app
+npm install
+npm start
+```
 
-● Has to be done in Javascript without Jquery ✔️
+## Todo
 
-● Homepage displays the latest comic ✔️
 
-● Display 1 comic strip per page ✔️
+>● Has to be hosted on Heroku ✔️
 
-● Buttons to navigate to the previous and next comic strip ✔️
+>● Has to be done in Javascript without Jquery ✔️
 
-● Display the date of when the comic strip was created ✔️
+>● Homepage displays the latest comic ✔️
 
-● Ability to navigate to a specific comic strip by including the comic # in the URL ✔️
+>● Display 1 comic strip per page ✔️
 
-● Parse transcript from API into a more readable format & display on the page ✔️
+>● Buttons to navigate to the previous and next comic strip ✔️
 
-● Make the page look nice using vanilla CSS (DO NOT use any CSS frameworks) ✔️
+>● Display the date of when the comic strip was created ✔️
 
-● A random button that goes to a random comic strip ✔️
+>● Ability to navigate to a specific comic strip by including the >comic ># in the URL ✔️
 
-● Make the site responsive ✔️
+>● Parse transcript from API into a more readable format & display on >the page ✔️
 
-● Each comic page has a counter that displays the amount of times this specific comic strip has been
-viewed on your site ✔️
+>● Make the page look nice using vanilla CSS (DO NOT use any CSS >frameworks) ✔️
+
+>● A random button that goes to a random comic strip ✔️
+
+>● Make the site responsive ✔️
+
+
+## Author
+>Nirav Patel
