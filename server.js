@@ -15,12 +15,9 @@ app.set("view engine", "html");
 // hold all the page visits for each comic
 function incrementPageVisit(id) {
   if (pageVisitCount[id]) {
-    pageVisitCount = {
-      ...pageVisitCount,
-      [id]: (pageVisitCount[id] += 1)
-    };
+    pageVisitCount[id]++;
   } else {
-    pageVisitCount = { ...pageVisitCount, [id]: 1 };
+    pageVisitCount[id] = 1;
   }
 }
 
@@ -32,15 +29,21 @@ router.get("/", function(req, res) {
 
 // redirect to comic based on the href provided
 router.get("/comic/:id?", async function(req, res) {
-  incrementPageVisit(req.params.id);
-  console.log("Loading Comic: " + req.params.id);
   try {
     await axios
       .get(`https://xkcd.com/${req.params.id || ""}/info.0.json`)
       .then(response => {
+        console.log("Loading Comic: " + response.data.num);
+
+        const comicId = response.data.num;
+
+        // increment our comic page visit count
+        incrementPageVisit(comicId);
+
+        // append our counter onto the page data
         let data = {
           ...response.data,
-          pageVisitCount: pageVisitCount[req.params.id]
+          pageVisitCount: pageVisitCount[comicId]
         };
 
         // regex parsing for calrity
@@ -57,6 +60,7 @@ router.get("/comic/:id?", async function(req, res) {
       });
   } catch (e) {
     console.log("comic not found, sending you back to homepage!");
+
     res.redirect(`/comic/`);
   }
 });
@@ -67,8 +71,9 @@ router.get("*", (req, res) => {
 });
 
 // add the router
-app.use("/", router);
+app.use(router);
 
+// start our server
 app.listen(PORT, () => {
   console.log("app running on ", PORT);
 });
