@@ -83,8 +83,6 @@ img {
   font-size: 1rem;
   font-family: Lucida, Helvetica, sans-serif;
   text-transform: capitalize;
-
-  transition: background-color 0.22s;
   font-variant: small-caps;
 }
 
