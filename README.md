@@ -1,31 +1,46 @@
-# comics-app
-copy of app hosted at: https://comics-app-nirav.herokuapp.com/comic/566
+# Web Comics
 
-Renders a specific comic based on the backend
+This is a comic strip rendering / reader app, the role of this app is to display all the comics from xkcd.com api. 
 
-Use the xkcd API (see https://xkcd.com/json.html) ✔️
+## Heroku Hosting
+[https://comics-app-nirav.herokuapp.com/
+](https://comics-app-nirav.herokuapp.com/)
 
-● Has to be hosted on Heroku ✔️
+## Installation
+run the following commands in your cmd or bash:
 
-● Has to be done in Javascript without Jquery ✔️
+```bash
+git clone https://github.com/Shahrzadk/S360-Initial-Case-Study-Shahrzad.git
+cd ./comics-app
+npm install
+npm start
+```
 
-● Homepage displays the latest comic ✔️
+## Todo
 
-● Display 1 comic strip per page ✔️
 
-● Buttons to navigate to the previous and next comic strip ✔️
+>● Has to be hosted on Heroku ✔️
 
-● Display the date of when the comic strip was created ✔️
+>● Has to be done in Javascript without Jquery ✔️
 
-● Ability to navigate to a specific comic strip by including the comic # in the URL ✔️
+>● Homepage displays the latest comic ✔️
 
-● Parse transcript from API into a more readable format & display on the page ✔️
+>● Display 1 comic strip per page ✔️
 
-● Make the page look nice using vanilla CSS (DO NOT use any CSS frameworks) ✔️
+>● Buttons to navigate to the previous and next comic strip ✔️
 
-● A random button that goes to a random comic strip ✔️
+>● Display the date of when the comic strip was created ✔️
 
-● Make the site responsive ✔️
+>● Ability to navigate to a specific comic strip by including the >comic ># in the URL ✔️
 
-● Each comic page has a counter that displays the amount of times this specific comic strip has been
-viewed on your site ✔️
+>● Parse transcript from API into a more readable format & display on >the page ✔️
+
+>● Make the page look nice using vanilla CSS (DO NOT use any CSS >frameworks) ✔️
+
+>● A random button that goes to a random comic strip ✔️
+
+>● Make the site responsive ✔️
+
+
+## Author
+Nirav Patel
