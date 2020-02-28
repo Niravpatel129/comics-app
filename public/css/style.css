@@ -87,6 +87,12 @@ img {
   font-variant: small-caps;
 }
 
+.disabled {
+  background-color: whitesmoke;
+  color: black;
+  opacity: 0.5;
+}
+
 .button:hover {
   background-color: whitesmoke;
   color: #222222;

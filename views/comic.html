@@ -18,8 +18,15 @@
             href="/comic/<%= Math.floor(Math.random() * Math.floor(2272)) %>"
             >Random</a
           >
+          <% if(num === 2273){ %>
+          <a class="button disabled">Next ❯</a>
+          <a class="button disabled">❯|</a>
+
+          <% } else{ %>
           <a class="button" href="/comic/<%= num+1 %>">Next ❯</a>
           <a class="button" href="/">❯|</a>
+
+          <% } %>
         </div>
       </div>
       <div class="container">
