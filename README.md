@@ -2,6 +2,10 @@
 
 This is a comic strip rendering / reader app, the role of this app is to display all the comics from xkcd.com api. 
 
+## Heroku Hosting
+[https://comics-app-nirav.herokuapp.com/
+](https://comics-app-nirav.herokuapp.com/)
+
 ## Installation
 run the following commands in your cmd or bash:
 
@@ -39,4 +43,4 @@ npm start
 
 
 ## Author
-Nirav Patel
+>Nirav Patel
