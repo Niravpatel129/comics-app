@@ -59,6 +59,9 @@ h1 a {
   color: red;
   flex-basis: 100%;
 }
+.transcript p {
+  padding-top: 25px;
+}
 
 p {
   white-space: pre-line;
