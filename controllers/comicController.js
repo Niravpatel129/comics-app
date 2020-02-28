@@ -1,4 +1,5 @@
 const axios = require("axios");
+const moment = require("moment");
 
 let pageVisitCount = {}; // hold how many times all the comics have been visited
 let latestComic; // hold the most early comic's id
@@ -20,12 +21,24 @@ function setLatestComic(param, id) {
   }
 }
 
+// get date
+function getDate(year, month, day) {
+  if (day < 10) {
+    day = day.padStart(2, "0");
+  }
+
+  if (month < 10) {
+    month = month.padStart(2, "0");
+  }
+
+  return moment(year + month + day).format("ll");
+}
+
 module.exports = {
   GetHome: (req, res) => {
     // home redirect to the "current comic"
     res.redirect(`/comic/`);
   },
-
   GetComicById: async (req, res) => {
     try {
       await axios
@@ -39,11 +52,18 @@ module.exports = {
           incrementPageVisit(comicId);
           setLatestComic(req.params.id, response.data.num);
 
+          let date = getDate(
+            response.data.year,
+            response.data.month,
+            response.data.day
+          );
+
           // append our counter onto the page data
           let data = {
             ...response.data,
             pageVisitCount: pageVisitCount[comicId],
-            latestComic: latestComic
+            latestComic: latestComic,
+            date: date
           };
 
           // regex parsing for calrity
