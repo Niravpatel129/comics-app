@@ -10,7 +10,7 @@ This is a comic strip rendering / reader app, the role of this app is to display
 run the following commands in your cmd or bash:
 
 ```bash
-git clone https://github.com/Shahrzadk/S360-Initial-Case-Study-Shahrzad.git
+git clone git@github.com:Niravpatel129/comics-app.git
 cd ./comics-app
 npm install
 npm start
