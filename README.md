@@ -7,7 +7,7 @@ This is a comic strip rendering / reader app, the role of this app is to display
 [https://comics-app-nirav.herokuapp.com/
 ](https://comics-app-nirav.herokuapp.com/)
 
-## Installation
+## Installation && Running the app
 
 run the following commands in your cmd or bash:
 
